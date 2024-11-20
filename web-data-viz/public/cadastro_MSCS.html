@@ -23,7 +23,7 @@
 
   <body>
     <div class="header">
-      <img class="logo" src="/blog/assets/logo/logo_mscs.svg" alt="" />
+      <img class="logo_vermelha" src="/blog/assets/logo/logo_mscs.svg" alt="" />
       <div class="navbar">
         <ul>
           <li><a href="">Home</a></li>
@@ -32,8 +32,20 @@
           <li><a href="">Contato</a></li>
         </ul>
         <div class="cadastro_login">
-          <button class="cadastre"><a style="color: #f0f0f0; text-decoration: none;" href="/web-data-viz/public/cadastro_MSCS.html">Cadastre-se</a></button>
-          <button class="login"><a style="color:#c30e13; text-decoration: none;" href="/web-data-viz/public/login_MSCS.html">Login</a></button>
+          <button class="cadastre">
+            <a
+              style="color: #f0f0f0; text-decoration: none"
+              href="/web-data-viz/public/cadastro_MSCS.html"
+              >Cadastre-se</a
+            >
+          </button>
+          <button class="login">
+            <a
+              style="color: #c30e13; text-decoration: none"
+              href="/web-data-viz/public/login_MSCS.html"
+              >Login</a
+            >
+          </button>
         </div>
       </div>
     </div>
@@ -43,44 +55,48 @@
         <h2>Cadastre-se</h2>
         <div class="informacoes">
           <div class="inputs">
-            <input type="text" name="" id="ipt_nome" placeholder=" Seu Nome" />
+            <input type="text" name="" id="nome_input" placeholder=" Seu Nome" />
             <input
               type="email"
               name=""
-              id="ipt_email"
+              id="email_input"
               placeholder=" Seu E-mail"
             />
             <input
               type="password"
               name=""
-              id="ipt_senha"
+              id="senha_input"
               placeholder=" Sua Senha"
             />
             <input
               type="text"
               name=""
-              id="ipt_genero"
+              id="genero_input"
               placeholder=" Seu Gênero"
             />
             <input
-              type="text"
+              type="number"
               name=""
-              id="ipt_idade"
+              id="idade_input"
               placeholder=" Sua Idade"
             />
             <input
-              type="text"
+              type="number"
               name=""
-              id="ipt_altura"
+              id="altura_input"
               placeholder=" Sua Altura"
             />
           </div>
           <div class="div_ipt_enviar_img">
             <input type="image" name="" id="ipt_enviar_img" />
           </div>
+        </div><div class="alerta_erro">
+          <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+          </div>
         </div>
         <div class="div_botao_formulario">
-          <button>Avançar</button>
+          <button onclick="cadastrar()">Cadastrar</button>
         </div>
       </div>
     </div>
@@ -96,16 +112,19 @@
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
-    var cpfVar = cpf_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    var generoVar = genero_input.value;
+    var idadeVar = Number(idade_input.value);
+    var alturaVar = Number(altura_input.value);
+
 
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      cpfVar == ""
+      generoVar == "" ||
+      idadeVar == "" ||
+      alturaVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -129,7 +148,9 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        cpfServer: cpfVar,
+        generoServer: generoVar,
+        idadeServer: idadeVar,
+        alturaServer: alturaVar,
       }),
     })
       .then(function (resposta) {
@@ -142,7 +163,7 @@
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "login_MSCS.html";
           }, "2000");
 
           limparFormulario();

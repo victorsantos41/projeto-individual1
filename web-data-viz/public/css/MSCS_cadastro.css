@@ -15,8 +15,8 @@
 
 .formulario {
   background-color: #f0f0f0;
-  height: 55%;
-  width: 40%;
+  height: 65%;
+  width: 30%;
   border-radius: 20px;
 }
 
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30%;
+  height: 50%;
 }
 
 .div_botao_formulario button {
@@ -41,6 +41,8 @@
   border-radius: 9px;
   width: 90%;
   height: 50px;
+  cursor: pointer;
+  
 }
 
 .informacoes {
