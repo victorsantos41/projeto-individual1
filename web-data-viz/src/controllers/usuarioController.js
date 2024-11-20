@@ -21,10 +21,12 @@ function autenticar(req, res) {
 
                                     res.json({
                                         id: resultadoAutenticar[0].id,
-                                        email: resultadoAutenticar[0].email,
                                         nome: resultadoAutenticar[0].nome,
+                                        email: resultadoAutenticar[0].email,
                                         senha: resultadoAutenticar[0].senha,
-                                        cpf: resultadoAutenticar[0].cpf,
+                                        genero: resultadoAutenticar[0].genero,
+                                        idade: resultadoAutenticar[0].idade,
+                                        altura: resultadoAutenticar[0].altura,
                                     });
             
                     } else if (resultadoAutenticar.length == 0) {
@@ -49,7 +51,9 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var cpf = req.body.cpfServer;
+    var genero = req.body.generoServer;
+    var idade = req.body.idadeServer;
+    var altura = req.body.alturaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -58,12 +62,17 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (cpf == undefined) {
-        res.status(400).send("Seu cpf está undefined!");
+    } else if (genero == undefined) {
+        res.status(400).send("Seu genero está undefined!");
+    } else if (idade == undefined) {
+        res.status(400).send("Sua idade está undefined!");
+    } else if (altura == undefined) {
+        res.status(400).send("Sua altura está undefined!");
     } else {
 
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, cpf)
+        usuarioModel.cadastrar(nome, email, senha, genero, idade, altura)
             .then(
                 function (resultado) {
                     res.json(resultado);
