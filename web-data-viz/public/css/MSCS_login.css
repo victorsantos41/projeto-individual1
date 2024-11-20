@@ -1,0 +1,61 @@
+* {
+  /* REMOVER ROLAGEM */
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+input {
+  height: 20px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  background-color: #ededed;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  background-color: #f0f0f0;
+  height: 55%;
+  width: 40%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario h2 {
+  font-weight: 500;
+}
+
+.div_logo {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #d8d6d6;
+  padding: 8px;
+}
+
+.logo {
+  position: relative;
+  top: 15px;
+}
+
+
+/*
+200	Extra Light (Ultra Light)
+300	Light
+400	Normal
+500	Medium
+600	Semi Bold (Demi Bold)
+700	Bold
+800	Extra Bold (Ultra Bold)
+900	Black (Heavy)
+*/

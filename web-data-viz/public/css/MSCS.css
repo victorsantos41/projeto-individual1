@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+  font-family: "Rubik";
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  font-weight: 600;
+  background: black;
+}
+
+.logo {
+  height: 40px;
+  position: relative;
+  left: 4%;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar ul li {
+  margin: 10px;
+}
+
+.navbar ul li a {
+  color: #f0f0f0;
+}
+
+.cadastro_login {
+  display: flex;
+  position: relative;
+  right: 4%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.cadastro_login button {
+  border: solid #c30e13 1px;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: 600;
+}
+
+.cadastre {
+  background-color: #c30e13;
+  color: #f0f0f0;
+  width: 120px;
+}
+
+.login {
+  background-color: #f0f0f0;
+  color: #c30e13;
+  width: 87px;
+}
+
+/*
+200	Extra Light (Ultra Light)
+300	Light
+400	Normal
+500	Medium
+600	Semi Bold (Demi Bold)
+700	Bold
+800	Extra Bold (Ultra Bold)
+900	Black (Heavy)
+*/
