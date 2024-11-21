@@ -1,6 +1,5 @@
 * {
   /* REMOVER ROLAGEM */
-
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -42,7 +41,6 @@
   width: 90%;
   height: 50px;
   cursor: pointer;
-  
 }
 
 .informacoes {
@@ -66,6 +64,13 @@
   background-color: #ededed;
 }
 
+select {
+  height: 20px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  background-color: #ededed;
+}
+
 .div_ipt_enviar_img {
   height: 95%;
   width: 87%;
@@ -74,8 +79,6 @@
   justify-content: center;
   border: dashed rgb(222, 222, 222);
 }
-
-
 
 /*
 200	Extra Light (Ultra Light)

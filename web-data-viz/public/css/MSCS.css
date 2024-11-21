@@ -1,11 +1,20 @@
 body {
   margin: 0px;
   font-family: "Rubik";
-  background-color: grey;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #51080a;
+}
+
+.cadastro_login a:hover {
+  color: #51080a;
 }
 
 /* HEADER */
@@ -69,6 +78,14 @@ a {
   background-color: #c30e13;
   color: #f0f0f0;
   width: 120px;
+}
+
+.cadastre a {
+  color: #f0f0f0;
+}
+
+.login a {
+  color: #c30e13;
 }
 
 .login {

@@ -1,0 +1,36 @@
+body {
+  background-image: url(../assets/imgs/bg_home_mscs.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  position: relative;
+  left: 4%;
+}
+
+.home h1 {
+  font-size: 50px;
+  width: 30%;
+}
+
+.home p {
+  font-weight: 200;
+}
+
+h1,
+p,
+button {
+  color: #f0f0f0;
+}
+
+/*
+200	Extra Light (Ultra Light)
+300	Light
+400	Normal
+500	Medium
+600	Semi Bold (Demi Bold)
+700	Bold
+800	Extra Bold (Ultra Bold)
+900	Black (Heavy)
+*/

@@ -22,40 +22,17 @@
   </head>
 
   <body>
-    <div class="header">
-      <img class="logo_vermelha" src="./assets/logo/logo_mscs.svg" alt="">
-      <div class="navbar">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Sobre</a></li>
-          <li><a href="">Depoimentos</a></li>
-          <li><a href="">Contato</a></li>
-        </ul>
-        <div class="cadastro_login">
-          <button class="cadastre">
-            <a
-              style="color: #f0f0f0; text-decoration: none"
-              href="#"
-              >Cadastre-se</a
-            >
-          </button>
-          <button class="login">
-            <a
-              style="color: #c30e13; text-decoration: none"
-              href="login.html"
-              >Login</a
-            >
-          </button>
-        </div>
-      </div>
-    </div>
-
     <div class="main">
       <div class="formulario">
         <h2>Cadastre-se</h2>
         <div class="informacoes">
           <div class="inputs">
-            <input type="text" name="" id="nome_input" placeholder=" Seu Nome" />
+            <input
+              type="text"
+              name=""
+              id="nome_input"
+              placeholder=" Seu Nome"
+            />
             <input
               type="email"
               name=""
@@ -68,12 +45,11 @@
               id="senha_input"
               placeholder=" Sua Senha"
             />
-            <input
-              type="text"
-              name=""
-              id="genero_input"
-              placeholder=" Seu Gênero"
-            />
+            <select id="genero_input">
+              <option value="#">Selecione seu gênero</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+            </select>
             <input
               type="number"
               name=""
@@ -90,7 +66,8 @@
           <div class="div_ipt_enviar_img">
             <input type="image" name="" id="ipt_enviar_img" />
           </div>
-        </div><div class="alerta_erro">
+        </div>
+        <div class="alerta_erro">
           <div class="card_erro" id="cardErro">
             <span id="mensagem_erro"></span>
           </div>
@@ -115,7 +92,6 @@
     var generoVar = genero_input.value;
     var idadeVar = Number(idade_input.value);
     var alturaVar = Number(altura_input.value);
-
 
     // Verificando se há algum campo em branco
     if (

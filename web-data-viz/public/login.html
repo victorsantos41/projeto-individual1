@@ -22,39 +22,11 @@
   </head>
 
   <body>
-    <div class="header">
-      <img class="logo_vermelha" src="./assets/logo/logo_mscs.svg" alt="">
-      <div class="navbar">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Sobre</a></li>
-          <li><a href="">Depoimentos</a></li>
-          <li><a href="">Contato</a></li>
-        </ul>
-        <div class="cadastro_login">
-          <button class="cadastre">
-            <a
-              style="color: #f0f0f0; text-decoration: none"
-              href="cadastro.html"
-              >Cadastre-se</a
-            >
-          </button>
-          <button class="login">
-            <a
-              style="color: #c30e13; text-decoration: none"
-              href="#"
-              >Login</a
-            >
-          </button>
-        </div>
-      </div>
-    </div>
-
     <div class="main">
       <div class="formulario">
         <div class="div_logo_formulario">
           <img
-            src="../assets/logo/logo_mscs_cinza_escura.svg"
+            src="./assets/logo/logo_mscs_cinza_escura.svg"
             alt=""
             class="logo_formulario"
           />
@@ -94,7 +66,6 @@
 
 <script>
   function entrar() {
-   
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
 
@@ -118,7 +89,7 @@
       },
       body: JSON.stringify({
         emailServer: emailVar,
-        senhaServer: senhaVar
+        senhaServer: senhaVar,
       }),
     })
       .then(function (resposta) {
