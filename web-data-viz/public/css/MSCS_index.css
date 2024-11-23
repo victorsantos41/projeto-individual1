@@ -1,27 +1,83 @@
+/* HOME */
 body {
   background-image: url(../assets/imgs/bg_home_mscs.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+
+.home {
+  height: 80vh;
 }
 
 .main {
   position: relative;
   left: 4%;
+  top: 4%;
 }
 
 .home h1 {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 600;
   width: 30%;
 }
 
 .home p {
   font-weight: 200;
+  width: 35%;
 }
 
-h1,
-p,
-button {
+.home h1,
+.home p,
+.home button {
   color: #f0f0f0;
+}
+
+.div_botao_home {
+  position: relative;
+  top: 30px;
+}
+
+.div_botao_home button {
+  border: solid #c30e13 1px;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: 600;
+  width: 150px;
+}
+
+.div_botao_home button:hover {
+  color: #51080a;
+  cursor: pointer;
+}
+
+/* FAIXA */
+
+.faixa {
+  height: 18vh;
+  background-color: #212121;
+}
+
+.informacoes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info {
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+.info h2 {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0px;
 }
 
 /*

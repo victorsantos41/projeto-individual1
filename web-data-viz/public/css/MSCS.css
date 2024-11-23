@@ -1,7 +1,6 @@
 body {
   margin: 0px;
   font-family: "Rubik";
-  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -9,8 +8,14 @@ a {
   text-decoration: none;
 }
 
+:root {
+
+  --tamanho-header: 100px;
+  --tamanho-footer: 65px;
+}
+
 .navbar a:hover {
-  color: #51080a;
+  color: #c30e13;
 }
 
 .cadastro_login a:hover {
@@ -23,7 +28,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: var(--tamanho-header);
   width: 100%;
   font-weight: 600;
   background: black;
