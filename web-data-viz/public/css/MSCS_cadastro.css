@@ -4,6 +4,8 @@
   overflow-x: hidden;
 }
 
+/* CADASTRO */
+
 .main {
   height: 100vh;
   width: 100vw;
@@ -29,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  height: 30%;
 }
 
 .div_botao_formulario button {
@@ -43,15 +45,15 @@
   cursor: pointer;
 }
 
-.informacoes {
+/* .informacoes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
+} */
 
 .inputs {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
   gap: 20px;
   position: relative;
   left: 30px;
@@ -71,14 +73,25 @@ select {
   background-color: #ededed;
 }
 
-.div_ipt_enviar_img {
+/* MENSAGEM REDIRECIONANDO PARA O LOGIN */
+
+#mensagem_realizado {
+  font-size: 15px;
+  width: 90%;
+}
+
+
+
+
+
+/* .div_ipt_enviar_img {
   height: 95%;
   width: 87%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: dashed rgb(222, 222, 222);
-}
+} */
 
 /*
 200	Extra Light (Ultra Light)
