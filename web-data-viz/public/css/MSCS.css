@@ -42,9 +42,6 @@ a {
 /* HEADER */
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: var(--tamanho-header);
   width: 100%;
   font-weight: 600;
@@ -67,9 +64,6 @@ a {
 
 .navbar ul {
   list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
