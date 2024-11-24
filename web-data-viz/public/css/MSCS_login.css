@@ -5,6 +5,13 @@
   overflow-x: hidden;
 }
 
+body {
+  background-image: url(../assets/imgs/pexels-estudiopolaroid-3112004.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 input {
   height: 30px;
   border: 1px solid grey;

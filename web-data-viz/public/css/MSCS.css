@@ -1,15 +1,32 @@
 body {
   margin: 0px;
   font-family: "Rubik";
-  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
-:root {
+.vermelho {
+  color: #c30e13;
+}
 
+.vermelho_escuro {
+  color: #51080a;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
   --tamanho-header: 100px;
   --tamanho-footer: 65px;
 }

@@ -1,4 +1,11 @@
 /* HOME */
+* {
+
+  overflow-x: hidden;
+
+}
+
+
 body {
   background-image: url(../assets/imgs/bg_home_mscs.svg);
   background-repeat: no-repeat;
@@ -6,13 +13,13 @@ body {
 }
 
 .home {
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .main {
   position: relative;
   left: 4%;
-  top: 4%;
+  top: 45px;
 }
 
 .home h1 {
@@ -53,32 +60,71 @@ body {
 /* FAIXA */
 
 .faixa {
-  height: 18vh;
+  min-height: 20vh;
   background-color: #212121;
+  padding: 5px 0px;
 }
 
 .informacoes {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
 }
 
 .info {
   color: #f0f0f0;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   gap: 10px;
 }
+
 .info h2 {
   font-weight: 700;
   font-size: 30px;
   margin: 0px;
 }
+
+/* POR QUE ESCOLHI? */
+
+.main_content1 {
+  width: 100%;
+  margin: 0;
+  padding: 50px 0px;
+  background-color: #f0f0f0;
+}
+
+.faixa,
+.main_content1 {
+  margin: 0;
+}
+
+.main_texto1 {
+  text-align: center;
+  height: 150px;
+  width: 50%;
+}
+
+.beneficios {
+  width: 80%;
+}
+
+.caixa {
+  width: 80%;
+}
+
+.caixa h3 {
+  font-weight: 500;
+  width: 220px;
+}
+
+.main_imagem1 img {
+  height: 400px;
+}
+
+/* NEUROPLASTICIDADE */
+
+
 
 /*
 200	Extra Light (Ultra Light)
