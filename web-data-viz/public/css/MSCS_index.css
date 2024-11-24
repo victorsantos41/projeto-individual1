@@ -40,8 +40,7 @@ body {
 }
 
 .div_botao_home {
-  position: relative;
-  top: 30px;
+  padding: 30px 0;
 }
 
 .div_botao_home button {
@@ -85,9 +84,9 @@ body {
   margin: 0px;
 }
 
-/* POR QUE ESCOLHI? */
+/* SOBRE */
 
-.main_content1 {
+.sobre {
   width: 100%;
   margin: 0;
   padding: 50px 0px;
@@ -95,9 +94,11 @@ body {
 }
 
 .faixa,
-.main_content1 {
+.sobre {
   margin: 0;
 }
+
+/* POR QUE ESCOLHI? */
 
 .main_texto1 {
   text-align: center;
@@ -118,13 +119,21 @@ body {
   width: 220px;
 }
 
-.main_imagem1 img {
-  height: 400px;
-}
 
 /* NEUROPLASTICIDADE */
 
+.neuroplasticidade {
 
+  min-height: 55vh;
+  gap: 50px;
+
+}
+
+.main_texto2 {
+
+  width: 30%;
+
+}
 
 /*
 200	Extra Light (Ultra Light)
