@@ -27,7 +27,7 @@ function autenticar(req, res) {
                                         genero: resultadoAutenticar[0].genero,
                                         idade: resultadoAutenticar[0].idade,
                                         altura: resultadoAutenticar[0].altura,
-                                    });
+                                    })
             
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
@@ -90,7 +90,43 @@ function cadastrar(req, res) {
     }
 }
 
+function entrar(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo login.html
+    // var nome = req.body.nomeServer
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
+    // var genero = req.body.generoServer;
+    // var idade = req.body.idadeServer;
+    // var altura = req.body.alturaServer;
+
+    // Faça as validações dos valores
+    if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    }  else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.entrar(email, senha)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o login! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    entrar
 }
