@@ -18,3 +18,12 @@ senha varchar(45),
 fkUsuario int
 );
 
+alter table login
+add column fkUsuario int;
+
+show tables;
+
+alter table login
+add constraint fkLoginUsuario foreign key (fkUsuario) references usuario(id);
+
+
