@@ -1,0 +1,9 @@
+.kpis_MSCS {
+
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 50px;
+}

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./../css/dashboards.css" />
     <link rel="stylesheet" href="./../css/estilo.css" />
     <link rel="stylesheet" href="./../css/MSCS.css">
+    <link rel="stylesheet" href="./../css/kpis_MSCS.css">
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -49,7 +50,7 @@
           </a>
         </div> -->
 
-        <div class="btn-nav" style="background-color: #c30e13;">
+        <div class="btn-nav" style="background-color: #c30e13; cursor: pointer;">
           <h3>Gráficos</h3>
         </div>
 
@@ -76,11 +77,20 @@
         </div>
         <!-- <div id="graficos"></div> -->
 
+        <div class="kpis_MSCS">
+            <div class="kpi_media_altura">
+                <h3>Média Altura:</h3>
+            <span id="media_altura"></span>
+        </div>
+        <div class="kpi_media_idade">
+            <h3>Média Idade:</h3>
+            <span id="media_idade"></span>
+        </div>
+        </div>
         <div style="width: 1000px">
           <canvas id="graficoInformacoes"></canvas>
         </div>
-        <span id="media_altura"></span>
-        <span id="media_idade"></span>
+      
       </div>
     </div>
   </body>
@@ -120,8 +130,8 @@
     fetch("http://localhost:8080/dashboard/kpis").then(function (resposta) {
       resposta.json().then(function (respostajson) {
         console.log(respostajson);
-        media_altura.innerHTML = respostajson[0].MediaAltura;
-        media_idade.innerHTML = respostajson[0].MediaIdade;
+        media_altura.innerHTML = Math.floor(respostajson[0].MediaAltura);
+        media_idade.innerHTML = Math.floor(respostajson[0].MediaIdade);
       });
     });
   }
